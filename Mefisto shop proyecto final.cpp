@@ -237,7 +237,9 @@ void lista()
                 case 1://todos
                     if (clasificacion[i] == "Todos")
                     {
-                        printf("Numero de articulo:%d \n", item[i]);
+                        if(item[i]!=0)
+                        {
+                      printf("Numero de articulo:%d \n", item[i]);
                         printf("nombre:%s \n", nombre[i].c_str());
                         printf("Descripcion:%s \n", descripcion[i].c_str());
                         printf("Caracteristicas:%s\n", caracteristicas[i].c_str());
@@ -248,6 +250,7 @@ void lista()
                         printf("subtotal:%f  \n", subtotal[i]);
                         printf("iva: %f \n", iva[i]);
                         printf("total %f \n", total[i]);
+                    }
                     }
                     system("pause");
                     break;
@@ -666,7 +669,7 @@ void archivos()
     ofstream archivo; //clase ofstream para leer archivos
     string nombrearchivo;
 
-    nombrearchivo = "LISTA-ARTICULOS";
+    nombrearchivo = "LISTA-ARTICULOS.txt";
 
     archivo.open(nombrearchivo.c_str(), ios::out);
 
